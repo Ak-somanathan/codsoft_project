@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Calculator - Black & White</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    .vertical-line {
+        position: fixed; /* Fixes the line in the left corner */
+        top: 60px;          /* Aligns the line to the top */
+        left: 80px;          /* Aligns the line to the left */
+        height: 80vh;    /* Full height of the viewport */
+        width: 8px;       /* Width of the line */
+        background-color: rgb(0, 0, 0);
+    }
+
+    h2 {
+        padding-top: 40px;
+        padding-right: 280px;
+        font-size: 50px;
+        color: rgb(2, 33, 90);
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif';
+    }
+</style>
+<body>
+    <div class="vertical-line"></div>
+    <h2>M I N I<br><br>C A L C U L A T O R</h2>
+    <div class="vertical-line"></div>
+    <div class="calculator">
+        <input type="text" class="calculator-screen" id="screen" disabled />
+
+        <div class="calculator-keys">
+            <button type="button" class="key" onclick="appendNumber('7')">7</button>
+            <button type="button" class="key" onclick="appendNumber('8')">8</button>
+            <button type="button" class="key" onclick="appendNumber('9')">9</button>
+            <button type="button" class="key operator" onclick="setOperation('/')">/</button>
+
+            <button type="button" class="key" onclick="appendNumber('4')">4</button>
+            <button type="button" class="key" onclick="appendNumber('5')">5</button>
+            <button type="button" class="key" onclick="appendNumber('6')">6</button>
+            <button type="button" class="key operator" onclick="setOperation('*')">×</button>
+
+            <button type="button" class="key" onclick="appendNumber('1')">1</button>
+            <button type="button" class="key" onclick="appendNumber('2')">2</button>
+            <button type="button" class="key" onclick="appendNumber('3')">3</button>
+            <button type="button" class="key operator" onclick="setOperation('-')">−</button>
+
+            <button type="button" class="key" onclick="appendNumber('0')">0</button>
+            <button type="button" class="key operator" onclick="clearScreen()">C</button>
+            <button type="button" class="key operator" onclick="calculateResult()">=</button>
+            <button type="button" class="key operator" onclick="setOperation('+')">+</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
